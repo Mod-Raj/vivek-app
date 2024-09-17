@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f9;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #333;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .student-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 4px;
+      }
+
+      .student-name {
+        flex: 1;
+        color: #333;
+        font-weight: bold;
+      }
+
+      .radio-group {
+        display: flex;
+        gap: 10px;
+      }
+
+      .radio-group label {
+        margin-right: 5px;
+        font-weight: normal;
+        color: #555;
+      }
+
+      .radio-group input {
+        margin-right: 5px;
+      }
+
+      .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
+      /* Responsive Design */
+      @media (max-width: 600px) {
+        .student-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .radio-group {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Choose Your Teammate!</h1>
+
+      <!-- Text field for user's name -->
+      <label for="userName">Enter your name:</label>
+      <input
+        type="text"
+        id="userName"
+        name="userName"
+        placeholder="Your Name"
+      />
+
+      <!-- List of 10 students with radio buttons -->
+      <form id="studentForm">
+        <div class="student-row">
+          <span class="student-name">Kavita Deshmukh </span>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="student1" value="Yes" /> Yes
+            </label>
+            <label>
+              <input type="radio" name="student1" value="No" /> No
+            </label>
+          </div>
+        </div>
+
+        <div class="student-row">
+          <span class="student-name">Amit Sharma </span>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="student2" value="Yes" /> Yes
+            </label>
+            <label>
+              <input type="radio" name="student2" value="No" /> No
+            </label>
+          </div>
+        </div>
+
+        <!-- Repeat this block for the other 8 students -->
+        <div class="student-row">
+          <span class="student-name">Priya Nair </span>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="student3" value="Yes" /> Yes
+            </label>
+            <label>
+              <input type="radio" name="student3" value="No" /> No
+            </label>
+          </div>
+        </div>
+
+        <div class="student-row">
+          <span class="student-name">Rohan Gupta </span>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="student4" value="Yes" /> Yes
+            </label>
+            <label>
+              <input type="radio" name="student4" value="No" /> No
+            </label>
+          </div>
+        </div>
+
+        <div class="student-row">
+          <span class="student-name">Sanjana Iyer </span>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="student5" value="Yes" /> Yes
+            </label>
+            <label>
+              <input type="radio" name="student5" value="No" /> No
+            </label>
+          </div>
+        </div>
+
+        <div class="student-row">
+          <span class="student-name">Vikram Singh </span>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="student6" value="Yes" /> Yes
+            </label>
+            <label>
+              <input type="radio" name="student6" value="No" /> No
+            </label>
+          </div>
+        </div>
+
+        <div class="student-row">
+          <span class="student-name">Neha Verma </span>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="student7" value="Yes" /> Yes
+            </label>
+            <label>
+              <input type="radio" name="student7" value="No" /> No
+            </label>
+          </div>
+        </div>
+
+        <div class="student-row">
+          <span class="student-name">Anil Patil </span>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="student8" value="Yes" /> Yes
+            </label>
+            <label>
+              <input type="radio" name="student8" value="No" /> No
+            </label>
+          </div>
+        </div>
+
+        <div class="student-row">
+          <span class="student-name">Sunita Joshi </span>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="student9" value="Yes" /> Yes
+            </label>
+            <label>
+              <input type="radio" name="student9" value="No" /> No
+            </label>
+          </div>
+        </div>
+
+        <div class="student-row">
+          <span class="student-name">Rahul Mehta </span>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="student10" value="Yes" /> Yes
+            </label>
+            <label>
+              <input type="radio" name="student10" value="No" /> No
+            </label>
+          </div>
+        </div>
+        <!-- <input type="submit"> -->
+        <button type="submit" class="submit-btn">Submit</button>
+
+      </form>
+    </div>
+  </body>
+</html>
